@@ -1,23 +1,24 @@
-/* Font import */
+/******************** Font import ********************/
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
 
-/* CSS Reset */
+/******************** CSS Reset ********************/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'DM Sans', sans-serif;
+  text-decoration: none;
 }
 
 :root {
-  /* Primary colors */
+  /******************** Primary colors ********************/
   --brand-green: #00856F;
   --brand-green-light: #DCE9E2;
   --brand-green-light-2: #F7F9F9;
   --brand-beige: #FFFAF1;
   --brand-green-hover: #00453A;
 
-  /* Secundary colors */
+  /******************** Secundary colors ********************/
   --gray-healine: #212529;
   --gray-paragraph: #495057;
   --white: #EDEDED;
@@ -26,4 +27,49 @@
 
 .container {
   padding: 4rem;
+}
+
+/******************* Nav ********************/
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.586rem 0;
+  background-color: var(--brand-green-light);
+}
+
+nav a.logo {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--gray-healine);
+}
+
+nav a.logo > span {
+  color: var(--brand-green);
+  font-weight: 500;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+nav ul li > a {
+  color: var(--brand-green);
+}
+
+nav a.primaryButton {
+  color: var(--brand-green);
+  border: 1px solid var(--brand-green);
+  padding: 0.625rem 1.5rem;
+  border-radius: 40px;
+  font-weight: bold;
+  transition: all .2s;
+}
+
+nav a.primaryButton:hover {
+  background-color: var(--brand-green);
+  color: var(--white);
 }
